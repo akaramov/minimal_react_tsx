@@ -5,6 +5,7 @@ interface ProductProps {
   productName: string;
   price: number;
   telegram: string;
+  status: "InStock" | "OutStock";
 }
 
 function Product({
@@ -14,6 +15,7 @@ function Product({
   productName,
   price,
   telegram,
+  status,
 }: ProductProps) {
   return (
     <>
@@ -25,6 +27,7 @@ function Product({
           <div className="product-id">ID: {id}</div>
           <div className="product-name">{productName}</div>
           <div className="price">{price}$</div>
+          <span className="status">{status}</span>
 
           <div className="social-icons">
             <a href={telegram} target="_blank" rel="noreferrer">
