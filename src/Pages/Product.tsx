@@ -1,3 +1,4 @@
+import { exchangeRiel } from "./exchangeRiel";
 interface ProductProps {
   image: string;
   alt: string;
@@ -26,7 +27,9 @@ function Product({
         <div className="card-body">
           <div className="product-id">ID: {id}</div>
           <div className="product-name">{productName}</div>
-          <div className="price">{price}$</div>
+          <div className="price">
+            {price}$ {exchangeRiel(price)}៛
+          </div>
           <span className="status">{status}</span>
 
           <div className="social-icons">
