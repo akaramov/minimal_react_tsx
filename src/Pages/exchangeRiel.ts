@@ -1,3 +1,3 @@
-export function exchangeRiel(price: number): string {
-  return (price * 4000).toLocaleString();
+export function exchangeRiel(price: number): number {
+  return price * 4000;
 }
